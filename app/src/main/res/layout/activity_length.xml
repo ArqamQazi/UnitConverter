@@ -41,9 +41,10 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:hint="Input"
-                    android:inputType="textCapWords"
+                    android:inputType="number"
                     android:textColor="#363A43"
                     android:textColorHint="#7A8089"
+                    android:text="1"
                     />
             </com.google.android.material.textfield.TextInputLayout>
 
@@ -56,6 +57,33 @@
                 android:layout_marginTop="20dp"
             />
 
+            <RadioGroup
+                android:id="@+id/i_radio_buttons"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <RadioButton
+                    android:id="@+id/i_km"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Kilometer"
+                />
+
+                <RadioButton
+                    android:id="@+id/i_m"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="meter"
+                />
+
+                <RadioButton
+                    android:id="@+id/i_cm"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="centi meter"
+                />
+
+            </RadioGroup>
 
 
         </LinearLayout>
@@ -85,9 +113,10 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:hint="Output"
-                    android:inputType="textCapWords"
+                    android:inputType="number"
                     android:textColor="#363A43"
                     android:textColorHint="#7A8089"
+                    android:text="1"
                     />
             </com.google.android.material.textfield.TextInputLayout>
 
@@ -100,11 +129,48 @@
                 android:layout_marginTop="20dp"
                 />
 
+
+            <RadioGroup
+                android:id="@+id/o_radio_buttons"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <RadioButton
+                    android:id="@+id/o_km"
+
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Kilometer"
+                    />
+
+                <RadioButton
+                    android:id="@+id/o_m"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="meter"
+                    />
+
+                <RadioButton
+                    android:id="@+id/o_cm"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="centimeter"
+                    />
+
+            </RadioGroup>
+
+
         </LinearLayout>
 
 
 
     </LinearLayout>
+
+    <Button
+        android:id="@+id/tmp_btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Check Selected item"/>
 
 
 </LinearLayout>
