@@ -1,116 +1,125 @@
 package com.example.unitconverter2.common;
 
 import android.os.Bundle;
-import android.widget.Button;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
+import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.AppCompatEditText;
 
 import com.example.unitconverter2.R;
 
+import java.text.DecimalFormat;
+
 public class Length extends AppCompatActivity {
 
-
-    // Radio Buttons
-    RadioButton iRadioButton;
-    RadioButton oRadioButton;
-
+    // RadioButtons for input and output units to set default option
     RadioButton ikm;
-    RadioButton im;
-    RadioButton icm;
-
     RadioButton okm;
-    RadioButton om;
-    RadioButton ocm;
 
-
-    // Input and Output Text Field
+    // Input and Output Text Fields
     AppCompatEditText inputValue;
     AppCompatEditText outputValue;
 
-    // Radio Group button and convert button
+    // RadioGroups for input and output units
     RadioGroup iRadioGroup;
     RadioGroup oRadioGroup;
-    Button convertButton;
 
-
-
-    
-
+    // Conversion factors
+    double conversionFactor = 1000.0;
+    double oConversionFactor = 1000.0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_length);
 
+        initializeUIElements();
 
+        setDefaultRadioButtonOptions();
+
+        setRadioGroupListeners();
+    }
+
+    // Initialize UI elements
+    private void initializeUIElements() {
         inputValue = findViewById(R.id.et_name_input);
         outputValue = findViewById(R.id.et_name_output);
-        convertButton = findViewById(R.id.tmp_btn);
 
-        //Input Radio Buttons
         iRadioGroup = findViewById(R.id.i_radio_buttons);
         ikm = findViewById(R.id.i_km);
-        im = findViewById(R.id.i_m);
-        icm = findViewById(R.id.i_cm);
 
-        // Output Radio Buttons
         oRadioGroup = findViewById(R.id.o_radio_buttons);
         okm = findViewById(R.id.o_km);
-        om = findViewById(R.id.o_m);
-        ocm = findViewById(R.id.o_cm);
+    }
 
-        // set default options
-
+    // Set default RadioButton options
+    private void setDefaultRadioButtonOptions() {
         ikm.setChecked(true);
         okm.setChecked(true);
-
-
-
-
-
-
-
     }
+
+    // Set listeners for RadioGroups
+    private void setRadioGroupListeners() {
+        iRadioGroup.setOnCheckedChangeListener((group, checkedId) -> {
+            RadioButton selectedRadioButton = findViewById(checkedId);
+            String selectedText = selectedRadioButton.getText().toString();
+            TextView inputUnitText = findViewById(R.id.input_unit_text);
+            inputUnitText.setText(selectedText);
+            conversionFactor = getConversionFactor(selectedText);
+            convertUnits();
+        });
+
+        oRadioGroup.setOnCheckedChangeListener((group, checkedId) -> {
+            RadioButton selectedRadioButton = findViewById(checkedId);
+            String selectedText = selectedRadioButton.getText().toString();
+            TextView outputUnitText = findViewById(R.id.output_unit_text);
+            outputUnitText.setText(selectedText);
+            oConversionFactor = getConversionFactor(selectedText);
+            convertUnits();
+        });
+    }
+
+    // Get conversion factor based on selected unit
+    private double getConversionFactor(String unit) {
+        switch (unit) {
+            case "Centimeter":
+                return 0.01;
+            case "Meter":
+                return 1.0;
+            case "Kilometer":
+                return 1000.0;
+            default:
+                return 1.0;
+        }
+    }
+
+    // Convert units and update the output value
     public void convertUnits() {
         String inputString = inputValue.getText().toString();
-        double inputValueDouble;
+        double inputValueDouble = parseInputValue(inputString);
+        double result = calculateConversion(inputValueDouble);
+        displayResult(result);
+    }
 
+    // Parse input value and handle potential NumberFormatException
+    private double parseInputValue(String inputString) {
         try {
-            inputValueDouble = Double.parseDouble(inputString);
+            return Double.parseDouble(inputString);
         } catch (NumberFormatException e) {
-            inputValueDouble = 0.0;
+            return 0.0;
         }
+    }
 
+    // Calculate conversion result
+    private double calculateConversion(double inputValueDouble) {
+        return inputValueDouble * conversionFactor / oConversionFactor;
+    }
+
+    // Display the result in the output TextView
+    private void displayResult(double result) {
+        DecimalFormat df = new DecimalFormat("#.########");
+        outputValue.setText(df.format(result));
     }
 }
-
-
-
-// This is the dead code but it might awake
-//
-//        iRadioGroup.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
-//    @Override
-//    public void onCheckedChanged(RadioGroup group, int checkedId) {
-//        // Find the radio button that was selected
-//        iRadioButton = findViewById(checkedId);
-//
-//        // Display a Toast message with the selected radio button text
-//        Toast.makeText(getApplicationContext(), "Selected: " + iRadioButton.getText(), Toast.LENGTH_SHORT).show();
-//    }
-//});
-//
-//
-//        oRadioGroup.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
-//    @Override
-//    public void onCheckedChanged(RadioGroup group, int checkedId) {
-//        // Find the radio button that was selected
-//        oRadioButton = findViewById(checkedId);
-//
-//        // Display a Toast message with the selected radio button text
-//        Toast.makeText(getApplicationContext(), "Selected: " + oRadioButton.getText(),
-//                Toast.LENGTH_SHORT).show();
-//    }
-//});

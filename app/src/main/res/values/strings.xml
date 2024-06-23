@@ -1,9 +1,12 @@
 <resources>
     <string name="app_name">UnitConverter2</string>
-    <string-array name="programming_languages">
-        <item>Java</item>
-        <item>Kotlin</item>
-        <item>Python</item>
-        <item>CPP</item>
-    </string-array>
+    <string name="kilometer">Kilometer</string>
+    <string name="meter">Meter</string>
+    <string name="centimeter">Centimeter</string>
+    <string name="input">Input</string>
+    <string name="output">Output</string>
+    <string name="_1">1</string>
+    <string name="from">From</string>
+    <string name="to">To</string>
+
 </resources>
