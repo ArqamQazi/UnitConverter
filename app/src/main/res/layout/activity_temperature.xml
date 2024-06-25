@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/temp"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal"
+    android:baselineAligned="false"
+    android:padding="8dp"
+    tools:context=".common.Temperature">
+
+    <!-- Input Section -->
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:layout_marginEnd="16dp"
+        android:orientation="vertical">
+
+        <!-- Input Unit Text -->
+        <TextView
+            android:id="@+id/input_unit_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/celsius"
+            android:textColor="@color/text_color" />
+
+        <!-- Input Value Field -->
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/et_temp_input"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/input"
+                android:inputType="numberDecimal"
+                android:text="@string/_1"
+                android:textColor="#363A43"
+                android:textColorHint="#7A8089" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!-- From Label -->
+        <TextView
+            android:id="@+id/from"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="@string/from"
+            android:textColor="@color/text_color" />
+
+        <!-- Input Unit RadioGroup -->
+        <RadioGroup
+            android:id="@+id/i_temp_radio_buttons"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <RadioButton
+                android:id="@+id/i_celsius"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/celsius" />
+
+            <RadioButton
+                android:id="@+id/i_fahrenheit"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/fahrenheit" />
+
+            <RadioButton
+                android:id="@+id/i_kelvin"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/kelvin" />
+        </RadioGroup>
+    </LinearLayout>
+
+    <!-- Output Section -->
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <!-- Output Unit Text -->
+        <TextView
+            android:id="@+id/output_unit_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/celsius"
+            android:textColor="@color/text_color" />
+
+        <!-- Output Value Field -->
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/et_temp_output"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/output"
+                android:inputType="numberDecimal"
+                android:text="@string/_1"
+                android:textColor="#363A43"
+                android:textColorHint="#7A8089" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!-- To Label -->
+        <TextView
+            android:id="@+id/to"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="@string/to"
+            android:textColor="@color/text_color" />
+
+        <!-- Output Unit RadioGroup -->
+        <RadioGroup
+            android:id="@+id/o_temp_radio_buttons"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <RadioButton
+                android:id="@+id/o_celsius"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/celsius" />
+
+            <RadioButton
+                android:id="@+id/o_fahrenheit"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/fahrenheit" />
+
+            <RadioButton
+                android:id="@+id/o_kelvin"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/kelvin" />
+        </RadioGroup>
+    </LinearLayout>
+
+
+</LinearLayout>

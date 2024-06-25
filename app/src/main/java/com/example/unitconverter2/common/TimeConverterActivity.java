@@ -12,11 +12,11 @@ import com.example.unitconverter2.R;
 
 import java.text.DecimalFormat;
 
-public class Length extends AppCompatActivity {
+public class TimeConverterActivity extends AppCompatActivity {
 
     // RadioButtons for input and output units to set default option
-    private RadioButton ikm;
-    private RadioButton okm;
+    private RadioButton iSeconds;
+    private RadioButton oSeconds;
 
     // Input and Output Text Fields
     private AppCompatEditText inputValue;
@@ -27,13 +27,13 @@ public class Length extends AppCompatActivity {
     private RadioGroup oRadioGroup;
 
     // Conversion factors
-    private double conversionFactor = 1000.0;
-    private double oConversionFactor = 1000.0;
+    private double conversionFactor = 1.0;
+    private double oConversionFactor = 1.0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_length);
+        setContentView(R.layout.activity_time);
 
         initializeUIElements();
 
@@ -44,20 +44,20 @@ public class Length extends AppCompatActivity {
 
     // Initialize UI elements
     private void initializeUIElements() {
-        inputValue = findViewById(R.id.et_name_input);
-        outputValue = findViewById(R.id.et_name_output);
+        inputValue = findViewById(R.id.et_time_input);
+        outputValue = findViewById(R.id.et_time_output);
 
-        iRadioGroup = findViewById(R.id.i_radio_buttons);
-        ikm = findViewById(R.id.i_km);
+        iRadioGroup = findViewById(R.id.i_time_radio_buttons);
+        iSeconds = findViewById(R.id.i_seconds);
 
-        oRadioGroup = findViewById(R.id.o_radio_buttons);
-        okm = findViewById(R.id.o_km);
+        oRadioGroup = findViewById(R.id.o_time_radio_buttons);
+        oSeconds = findViewById(R.id.o_seconds);
     }
 
     // Set default RadioButton options
     private void setDefaultRadioButtonOptions() {
-        ikm.setChecked(true);
-        okm.setChecked(true);
+        iSeconds.setChecked(true);
+        oSeconds.setChecked(true);
     }
 
     // Set listeners for RadioGroups
@@ -84,12 +84,11 @@ public class Length extends AppCompatActivity {
     // Get conversion factor based on selected unit
     private double getConversionFactor(String unit) {
         switch (unit) {
-            case "Centimeter":
-                return 0.01;
-            case "Meter":
-                return 1.0;
-            case "Kilometer":
-                return 1000.0;
+            case "Minutes":
+                return 60.0;
+            case "Hours":
+                return 3600.0;
+            case "Seconds":
             default:
                 return 1.0;
         }
