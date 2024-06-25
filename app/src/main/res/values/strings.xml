@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">UnitConverter2</string>
+    <string name="app_name">UnitConverter</string>
     <string name="kilometer">Kilometer</string>
     <string name="meter">Meter</string>
     <string name="centimeter">Centimeter</string>

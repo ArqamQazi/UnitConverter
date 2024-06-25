@@ -35,6 +35,8 @@ public class Length extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_length);
 
+
+
         initializeUIElements();
 
         setDefaultRadioButtonOptions();
@@ -122,4 +124,5 @@ public class Length extends AppCompatActivity {
         DecimalFormat df = new DecimalFormat("#.########");
         outputValue.setText(df.format(result));
     }
+
 }

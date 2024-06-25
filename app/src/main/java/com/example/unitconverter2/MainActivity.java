@@ -38,7 +38,7 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
-        tempCard = findViewById(R.id.temperature);
+        tempCard = findViewById(R.id.temperature_card);
         tempCard.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -46,7 +46,5 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
-
-
     }
 }
