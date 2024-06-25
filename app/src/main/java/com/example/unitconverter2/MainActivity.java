@@ -22,6 +22,8 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        getSupportActionBar().setTitle("MeasureMate");
+
         b1 = findViewById(R.id.Length);
         b1.setOnClickListener(new View.OnClickListener() {
             @Override

@@ -14,6 +14,7 @@ import java.text.DecimalFormat;
 
 public class Length extends AppCompatActivity {
 
+
     // RadioButtons for input and output units to set default option
     private RadioButton ikm;
     private RadioButton okm;
@@ -35,7 +36,7 @@ public class Length extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_length);
 
-
+        getSupportActionBar().setTitle("MeasureMate");
 
         initializeUIElements();
 

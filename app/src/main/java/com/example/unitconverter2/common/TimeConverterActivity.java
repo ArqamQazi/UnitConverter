@@ -34,7 +34,7 @@ public class TimeConverterActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_time);
-
+        getSupportActionBar().setTitle("MeasureMate");
         initializeUIElements();
 
         setDefaultRadioButtonOptions();
