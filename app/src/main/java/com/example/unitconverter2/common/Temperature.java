@@ -103,39 +103,23 @@ public class Temperature extends AppCompatActivity {
         if (inputUnit.equals("Celsius") && outputUnit.equals("Celsius")) {
             result = inputValueDouble;
         } else if (inputUnit.equals("Celsius") && outputUnit.equals("Fahrenheit")) {
-            
+            result = inputValueDouble * 9/5 + 32;
         } else if (inputUnit.equals("Celsius") && outputUnit.equals("Kelvin")) {
-
+            result = inputValueDouble + 273.15;
         } else if (inputUnit.equals("Fahrenheit") && outputUnit.equals("Fahrenheit")) {
-
+            result = inputValueDouble;
         } else if (inputUnit.equals("Fahrenheit") && outputUnit.equals("Celsius")) {
-
+            result = (inputValueDouble - 32) * 5/9;
         } else if (inputUnit.equals("Fahrenheit") && outputUnit.equals("Kelvin")) {
-
+            result = (inputValueDouble - 32) * 5/9 + 273.15;
         } else if (inputUnit.equals("Kelvin") && outputUnit.equals("Kelvin")) {
-
+            result = inputValueDouble;
         } else if (inputUnit.equals("Kelvin") && outputUnit.equals("Celsius")) {
-
-        } else if (inputUnit.equals("Kelvin") && outputUnit.equals("Fahrenheit")) {
-
-        } else {
-
-        }
-
-
-
-        // Convert from input unit to Celsius
-        if (inputUnit.equals("Fahrenheit")) {
-            result = (inputValueDouble - 32) * 5 / 9;
-        } else if (inputUnit.equals("Kelvin")) {
             result = inputValueDouble - 273.15;
-        }
-
-        // Convert from Celsius to output unit
-        if (outputUnit.equals("Fahrenheit")) {
-            result = (result * 9 / 5) + 32;
-        } else if (outputUnit.equals("Kelvin")) {
-            result = result + 273.15;
+        } else if (inputUnit.equals("Kelvin") && outputUnit.equals("Fahrenheit")) {
+            result = (inputValueDouble - 273.15) * 9/5 + 32;
+        } else {
+            throw new IllegalArgumentException("Invalid unit conversion");
         }
 
         return result;
