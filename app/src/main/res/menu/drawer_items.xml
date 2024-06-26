@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+
+
+    <item
+        android:icon="@drawable/page"
+        android:id="@+id/navPage"
+        android:background="@android:color/transparent"
+        android:title="Page" />
+
+    <item
+        android:icon="@drawable/about"
+        android:id="@+id/navAbout"
+        android:background="@android:color/transparent"
+        android:title="About" />
+
+    <item
+        android:icon="@drawable/settings"
+        android:id="@+id/navSetteings"
+        android:background="@android:color/transparent"
+        android:title="Settings" />
+
+
+
+
+</menu>
