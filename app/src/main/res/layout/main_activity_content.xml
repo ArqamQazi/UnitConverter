@@ -17,6 +17,9 @@
             android:padding="5dp"
             android:src="@drawable/drawer_menu" />
     </Toolbar>
+
+    <include
+        layout="@layout/activity_ui"/>
 </LinearLayout>
 
 

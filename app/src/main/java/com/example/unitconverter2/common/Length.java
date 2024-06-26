@@ -36,7 +36,7 @@ public class Length extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_length);
 
-        getSupportActionBar().setTitle("MeasureMate");
+//        getSupportActionBar().setTitle("MeasureMate");
 
         initializeUIElements();
 

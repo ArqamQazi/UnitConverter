@@ -3,15 +3,27 @@ package com.example.unitconverter2;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.view.MenuItem;
+import android.widget.Toast;
+
+import android.widget.ImageButton;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.drawerlayout.widget.DrawerLayout;
+import androidx.annotation.NonNull;
+
 
 import com.example.unitconverter2.common.Length;
 import com.example.unitconverter2.common.Temperature;
 import com.example.unitconverter2.common.TimeConverterActivity;
 import com.google.android.material.card.MaterialCardView;
+import com.google.android.material.navigation.NavigationView;
 
 public class MainActivity extends AppCompatActivity {
+
+    DrawerLayout drawerLayout;
+    ImageButton buttonDrawerToggle;
+    NavigationView navigationView;
 
     MaterialCardView b1;
     MaterialCardView timeCard;
@@ -22,7 +34,44 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        getSupportActionBar().setTitle("MeasureMate");
+
+        drawerLayout = findViewById(R.id.main);
+        buttonDrawerToggle = findViewById(R.id.ButtonDrwaertoggle);
+        navigationView = findViewById(R.id.navigationview);
+
+
+
+        buttonDrawerToggle.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                drawerLayout.open();
+            }
+        });
+
+        navigationView.setNavigationItemSelectedListener(new NavigationView.OnNavigationItemSelectedListener() {
+            @Override
+            public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+
+                int itemId = item.getItemId();
+                if(itemId == R.id.navAbout) {
+                    Toast.makeText(MainActivity.this, "About Clicked", Toast.LENGTH_SHORT).show();
+                }
+
+                if(itemId == R.id.navPage) {
+                    Toast.makeText(MainActivity.this, "Page Clicked", Toast.LENGTH_SHORT).show();
+                }
+
+                if(itemId == R.id.navSetteings) {
+                    Toast.makeText(MainActivity.this, "Setting Clicked", Toast.LENGTH_SHORT).show();
+                }
+
+                drawerLayout.close();
+
+                return false;
+            }
+        });
+
+//        getSupportActionBar().setTitle("MeasureMate");
 
         b1 = findViewById(R.id.Length);
         b1.setOnClickListener(new View.OnClickListener() {
@@ -48,5 +97,7 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+
+
     }
 }
