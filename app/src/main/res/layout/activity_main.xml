@@ -10,7 +10,6 @@
 
     tools:context=".MainActivity">
 
-
     <include
         layout="@layout/main_activity_content"/>
 

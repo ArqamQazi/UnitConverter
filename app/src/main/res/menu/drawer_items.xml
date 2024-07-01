@@ -1,26 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
-
-
-
+    <item
+        android:icon="@drawable/straighten_24px"
+        android:id="@+id/navLength"
+        android:background="@android:color/transparent"
+        android:title="Length" />
 
     <item
-        android:icon="@drawable/page"
-        android:id="@+id/navPage"
+        android:icon="@drawable/device_thermostat_24px"
+        android:id="@+id/navTemperature"
         android:background="@android:color/transparent"
-        android:title="Page" />
+        android:title="Temperature" />
 
     <item
-        android:icon="@drawable/about"
-        android:id="@+id/navAbout"
+        android:icon="@drawable/schedule_24px"
+        android:id="@+id/navTime"
         android:background="@android:color/transparent"
-        android:title="About" />
-
-    <item
-        android:icon="@drawable/settings"
-        android:id="@+id/navSetteings"
-        android:background="@android:color/transparent"
-        android:title="Settings" />
+        android:title="Time" />
 
 
 

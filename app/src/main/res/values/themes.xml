@@ -6,5 +6,10 @@
         <item name="android:statusBarColor"> @android:color/transparent</item>
     </style>
 
+    <style name="AppTheme.WithActionBar" parent="Theme.Material3.DayNight">
+        <!-- Customize your theme here -->
+    </style>
+
+
     <style name="Theme.UnitConverter2" parent="Base.Theme.UnitConverter2" />
 </resources>

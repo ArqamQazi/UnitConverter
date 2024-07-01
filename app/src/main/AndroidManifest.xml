@@ -15,6 +15,7 @@
         <activity
             android:name=".common.Temperature"
             android:exported="false"
+            android:theme="@style/AppTheme.WithActionBar"
             android:parentActivityName=".MainActivity"
             />
 <!--        <activity-->
@@ -24,11 +25,13 @@
         <activity
             android:name=".common.TimeConverterActivity"
             android:exported="false"
+            android:theme="@style/AppTheme.WithActionBar"
             android:parentActivityName=".MainActivity"
             />
         <activity
             android:name=".common.Length"
             android:exported="false"
+            android:theme="@style/AppTheme.WithActionBar"
             android:parentActivityName=".MainActivity"/>
         <activity
             android:name=".MainActivity"

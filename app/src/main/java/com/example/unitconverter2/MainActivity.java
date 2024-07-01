@@ -53,16 +53,19 @@ public class MainActivity extends AppCompatActivity {
             public boolean onNavigationItemSelected(@NonNull MenuItem item) {
 
                 int itemId = item.getItemId();
-                if(itemId == R.id.navAbout) {
-                    Toast.makeText(MainActivity.this, "About Clicked", Toast.LENGTH_SHORT).show();
+                if(itemId == R.id.navLength) {
+                    Intent intent = new Intent(MainActivity.this, Length.class);
+                    startActivity(intent);
                 }
 
-                if(itemId == R.id.navPage) {
-                    Toast.makeText(MainActivity.this, "Page Clicked", Toast.LENGTH_SHORT).show();
+                if(itemId == R.id.navTemperature) {
+                    Intent intent = new Intent(MainActivity.this, Temperature.class);
+                    startActivity(intent);
                 }
 
-                if(itemId == R.id.navSetteings) {
-                    Toast.makeText(MainActivity.this, "Setting Clicked", Toast.LENGTH_SHORT).show();
+                if(itemId == R.id.navTime) {
+                    Intent intent = new Intent(MainActivity.this, TimeConverterActivity.class);
+                    startActivity(intent);
                 }
 
                 drawerLayout.close();
