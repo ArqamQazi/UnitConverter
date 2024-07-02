@@ -1,0 +1,27 @@
+<resources>
+    <string name="app_name">UnitConverter</string>
+    <string name="kilometer">Kilometer</string>
+    <string name="meter">Meter</string>
+    <string name="centimeter">Centimeter</string>
+    <string name="input">Input</string>
+    <string name="output">Output</string>
+    <string name="_1">1</string>
+    <string name="from">From</string>
+    <string name="to">To</string>
+    <string name="minutes">Minutes</string>
+    <string name="hours">Hours</string>
+    <string name="seconds">Seconds</string>
+    <string name="celsius">Celsius</string>
+    <string name="fahrenheit">Fahrenheit</string>
+    <string name="kelvin">Kelvin</string>
+    <string name="kilobytes">kiloBytes</string>
+    <string name="megabytes">MegaBytes</string>
+    <string name="gigabytes">GigaBytes</string>
+    <string name="kilogram">Kilogram</string>
+    <string name="grams">Grams</string>
+    <string name="pounds">Pounds</string>
+    <string name="Kmph">Kmph</string>
+    <string name="Kms">Kms</string>
+    <string name="Mph">Mph</string>
+
+</resources>
