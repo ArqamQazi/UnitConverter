@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="text_color">#A1A1A1</color>
+    <color name="white">#FFFFFFFF</color>
+    <string name="_1">1</string>
+    <string name="app_name">UnitConverter</string>
+    <string name="celsius">Celsius</string>
+    <string name="centimeter">Centimeter</string>
+    <string name="fahrenheit">Fahrenheit</string>
+    <string name="from">From</string>
+    <string name="hours">Hours</string>
+    <string name="input">Input</string>
+    <string name="kelvin">Kelvin</string>
+    <string name="kilometer">Kilometer</string>
+    <string name="meter">Meter</string>
+    <string name="minutes">Minutes</string>
+    <string name="output">Output</string>
+    <string name="seconds">Seconds</string>
+    <string name="to">To</string>
+    <style name="AppTheme.WithActionBar" parent="Theme.Material3.DayNight">
+        
+    </style>
+    <style name="Base.Theme.UnitConverter2" parent="Theme.Material3.DayNight.NoActionBar">
+        
+        
+        <item name="android:statusBarColor"> @android:color/transparent</item>
+    </style>
+    <style name="Theme.UnitConverter2" parent="Base.Theme.UnitConverter2"/>
+</resources>

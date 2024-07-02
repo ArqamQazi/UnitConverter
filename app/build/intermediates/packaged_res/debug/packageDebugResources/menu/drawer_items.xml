@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:icon="@drawable/straighten_24px"
+        android:id="@+id/navLength"
+        android:background="@android:color/transparent"
+        android:title="Length" />
+
+    <item
+        android:icon="@drawable/device_thermostat_24px"
+        android:id="@+id/navTemperature"
+        android:background="@android:color/transparent"
+        android:title="Temperature" />
+
+    <item
+        android:icon="@drawable/schedule_24px"
+        android:id="@+id/navTime"
+        android:background="@android:color/transparent"
+        android:title="Time" />
+
+
+
+
+</menu>
