@@ -27,6 +27,7 @@
         android:layout_marginEnd="97dp"
         android:layout_marginBottom="420dp"
         app:srcCompat="@mipmap/ic_launcher"
+        android:contentDescription="@string/logo"
         tools:layout_editor_absoluteX="85dp"
         tools:layout_editor_absoluteY="121dp" />
 
@@ -40,9 +41,9 @@
         android:layout_marginBottom="228dp"
         android:fontFamily="sans-serif-condensed"
         android:gravity="center"
-        android:text="MeasureMate is designed to handle all your unit conversion needs, covering a wide range of categories, including length, temperature, speed, time, mass, and storage. We aim to provide an intuitive and reliable tool that you can trust for accurate conversions every time."
+        android:text="@string/about_text"
         android:textColor="@color/black"
-        android:textSize="20dp"
+        android:textSize="20sp"
         tools:layout_editor_absoluteX="156dp"
         tools:layout_editor_absoluteY="338dp" />
 
@@ -55,9 +56,9 @@
         android:layout_marginEnd="-139dp"
         android:layout_marginBottom="-38dp"
         android:fontFamily="sans-serif-condensed"
-        android:text="Rate Us!"
+        android:text="@string/rate_us"
         android:textColor="@color/black"
-        android:textSize="20dp"
+        android:textSize="20sp"
         tools:layout_editor_absoluteX="156dp"
         tools:layout_editor_absoluteY="338dp" />
 </RelativeLayout>

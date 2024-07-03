@@ -1,22 +1,14 @@
 package com.example.unitconverter2.common;
 
 import android.os.Bundle;
-import android.view.MenuItem;
-import android.view.View;
-import android.widget.ImageButton;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.TextView;
-import android.widget.Toast;
 
-import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.AppCompatEditText;
-import androidx.drawerlayout.widget.DrawerLayout;
 
-import com.example.unitconverter2.MainActivity;
 import com.example.unitconverter2.R;
-import com.google.android.material.navigation.NavigationView;
 
 import java.text.DecimalFormat;
 
@@ -97,10 +89,11 @@ public class Length extends AppCompatActivity {
         switch (unit) {
             case "Centimeter":
                 return 0.01;
-            case "Meter":
-                return 1.0;
+
             case "Kilometer":
                 return 1000.0;
+            case "Meter":
+
             default:
                 return 1.0;
         }

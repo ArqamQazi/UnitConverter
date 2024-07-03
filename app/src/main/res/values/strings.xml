@@ -23,5 +23,9 @@
     <string name="Kmph">Kmph</string>
     <string name="Kms">Kms</string>
     <string name="Mph">Mph</string>
+    <string name="about_text">MeasureMate is designed to handle all your unit conversion needs, covering a wide range of categories, including length, temperature, speed, time, mass, and storage. We aim to provide an intuitive and reliable tool that you can trust for accurate conversions every time.</string>
+    <string name="logo">Logo</string>
+    <string name="rate_us">Rate Us!</string>
+    <string name="measuremate">MeasureMate</string>
 
 </resources>

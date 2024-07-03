@@ -95,7 +95,7 @@ public class Mass extends AppCompatActivity {
 
 
     private double calculateConversion(double inputValueDouble) {
-        double result = inputValueDouble;
+        double result;
         if (inputUnit.equals("Kilogram") && outputUnit.equals("Kilogram")) {
             result = inputValueDouble;
         } else if (inputUnit.equals("Kilogram") && outputUnit.equals("Grams")) {

@@ -1,6 +1,5 @@
 package com.example.unitconverter2.common;
 
-import android.annotation.SuppressLint;
 import android.os.Bundle;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;

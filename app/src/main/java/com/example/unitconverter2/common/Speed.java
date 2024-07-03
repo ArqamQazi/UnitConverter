@@ -105,7 +105,7 @@ public class Speed extends AppCompatActivity {
 
     // Calculate conversion result
     private double calculateConversion(double inputValueDouble) {
-        double result = inputValueDouble;
+        double result;
 
         if (inputUnit.equals("Kmph") && outputUnit.equals("Kmph")) {
             result = inputValueDouble;

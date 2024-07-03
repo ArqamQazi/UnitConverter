@@ -11,18 +11,20 @@
 
         <ImageButton
             android:id="@+id/ButtonDrwaertoggle"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
             android:background="@android:color/transparent"
+            android:contentDescription="Menu_button"
             android:padding="5dp"
             android:src="@drawable/drawer_menu" />
         <TextView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:text="MeasureMate"
+            android:text="@string/measuremate"
             android:textColor="@color/white"
             android:textSize="20sp"
             android:paddingStart="10dp"
+            android:paddingEnd="10dp"
             android:layout_gravity="center"
         />
     </Toolbar>

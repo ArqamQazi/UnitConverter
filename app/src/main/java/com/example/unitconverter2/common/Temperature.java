@@ -98,7 +98,7 @@ public class Temperature extends AppCompatActivity {
 
     // Calculate conversion result
     private double calculateConversion(double inputValueDouble) {
-        double result = inputValueDouble;
+        double result;
 
         if (inputUnit.equals("Celsius") && outputUnit.equals("Celsius")) {
             result = inputValueDouble;
