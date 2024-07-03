@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:padding="8dp">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="16dp"
+        >
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="0dp"
+            android:layout_height="100dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginStart="6dp"
+            android:id="@+id/Length"
+            android:layout_weight="1">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:padding="10dp">
+
+                <ImageView
+                    android:layout_width="91dp"
+                    android:layout_height="69dp"
+                    android:layout_weight="1"
+                    app:tint="@color/black"
+                    android:adjustViewBounds="true"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/straighten_24px" />
+
+                <TextView
+                    android:layout_width="88dp"
+                    android:layout_height="wrap_content"
+                    android:text="Length"
+                    android:gravity="center"
+                    android:textStyle="bold"
+                    />
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="0dp"
+            android:layout_height="100dp"
+            android:layout_marginEnd="16dp"
+            android:id="@+id/temperature_card"
+            android:layout_weight="1">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="69dp"
+                android:layout_weight="1"
+                android:adjustViewBounds="true"
+                android:scaleType="fitCenter"
+                app:tint="@color/black"
+                android:src="@drawable/device_thermostat_24px" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="160dp"
+                android:gravity="center"
+                android:text="Temperature"
+                android:textStyle="bold" />
+        </com.google.android.material.card.MaterialCardView>
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/Time"
+            android:layout_width="0dp"
+            android:layout_height="100dp"
+            android:layout_marginEnd="8dp"
+            android:layout_weight="1">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="69dp"
+                android:layout_weight="1"
+                android:adjustViewBounds="true"
+                android:scaleType="fitCenter"
+                app:tint="@color/black"
+                android:src="@drawable/schedule_24px" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="160dp"
+                android:gravity="center"
+                android:text="Time"
+                android:textStyle="bold" />
+
+        </com.google.android.material.card.MaterialCardView>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="0dp"
+            android:layout_height="100dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginStart="6dp"
+            android:id="@+id/storage"
+            android:layout_weight="1">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:padding="10dp">
+
+                <ImageView
+                    android:layout_width="91dp"
+                    android:layout_height="69dp"
+                    android:layout_weight="1"
+                    android:adjustViewBounds="true"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/storage"
+                    />
+
+                <TextView
+                    android:layout_width="88dp"
+                    android:layout_height="wrap_content"
+                    android:text="Storage"
+                    android:gravity="center"
+                    android:textStyle="bold"
+                    />
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <com.google.android.material.card.MaterialCardView
+                android:layout_width="0dp"
+                android:layout_height="100dp"
+                android:layout_marginEnd="16dp"
+                android:id="@+id/Mass"
+                android:layout_weight="1">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="69dp"
+                    android:layout_weight="1"
+                    android:adjustViewBounds="true"
+                    android:scaleType="fitCenter"
+                    app:tint="@color/black"
+                    android:src="@drawable/w_mass" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="160dp"
+                    android:gravity="center"
+                    android:text="Mass"
+                    android:textStyle="bold" />
+            </com.google.android.material.card.MaterialCardView>
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="0dp"
+            android:layout_height="100dp"
+            android:layout_marginEnd="8dp"
+            android:id="@+id/Speed"
+            android:layout_weight="1">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="69dp"
+                android:layout_weight="1"
+                android:adjustViewBounds="true"
+                android:scaleType="fitCenter"
+                android:src="@drawable/speed" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="160dp"
+                android:gravity="center"
+                android:text="Speed"
+                android:textStyle="bold" />
+        </com.google.android.material.card.MaterialCardView>
+    </LinearLayout>
+</LinearLayout>
