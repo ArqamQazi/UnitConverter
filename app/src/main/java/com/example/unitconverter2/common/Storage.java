@@ -12,29 +12,29 @@ import com.example.unitconverter2.R;
 
 import java.text.DecimalFormat;
 
-public class Temperature extends AppCompatActivity {
-
+public class Storage extends AppCompatActivity {
     // RadioButtons for input and output units to set default option
-    RadioButton iCelsius;
-    RadioButton oCelsius;
+    private RadioButton ikb;
+    private RadioButton okb;
 
     // Input and Output Text Fields
-    AppCompatEditText inputValue;
-    AppCompatEditText outputValue;
+    private AppCompatEditText inputValue;
+    private AppCompatEditText outputValue;
 
     // RadioGroups for input and output units
-    RadioGroup iRadioGroup;
-    RadioGroup oRadioGroup;
+    private RadioGroup iRadioGroup;
+    private RadioGroup oRadioGroup;
 
     // Selected units
-    String inputUnit = "Celsius";
-    String outputUnit = "Celsius";
+    String inputUnit = "kiloBytes";
+    String outputUnit = "kiloBytes";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_temperature);
-//        getSupportActionBar().setTitle("MeasureMate");
+        setContentView(R.layout.activity_storage);
+
         initializeUIElements();
 
         setDefaultRadioButtonOptions();
@@ -42,22 +42,21 @@ public class Temperature extends AppCompatActivity {
         setRadioGroupListeners();
     }
 
-    // Initialize UI elements
     private void initializeUIElements() {
-        inputValue = findViewById(R.id.et_temp_input);
-        outputValue = findViewById(R.id.et_temp_output);
+        inputValue = findViewById(R.id.et_time_input);
+        outputValue = findViewById(R.id.et_time_output);
 
-        iRadioGroup = findViewById(R.id.i_temp_radio_buttons);
-        iCelsius = findViewById(R.id.i_celsius);
+        iRadioGroup = findViewById(R.id.i_radio_buttons);
+        ikb = findViewById(R.id.i_kb);
 
-        oRadioGroup = findViewById(R.id.o_temp_radio_buttons);
-        oCelsius = findViewById(R.id.o_celsius);
+        oRadioGroup = findViewById(R.id.o_radio_buttons);
+        okb = findViewById(R.id.o_kb);
     }
 
     // Set default RadioButton options
     private void setDefaultRadioButtonOptions() {
-        iCelsius.setChecked(true);
-        oCelsius.setChecked(true);
+        ikb.setChecked(true);
+        okb.setChecked(true);
     }
 
     // Set listeners for RadioGroups
@@ -65,7 +64,7 @@ public class Temperature extends AppCompatActivity {
         iRadioGroup.setOnCheckedChangeListener((group, checkedId) -> {
             RadioButton selectedRadioButton = findViewById(checkedId);
             inputUnit = selectedRadioButton.getText().toString();
-            TextView inputUnitText = findViewById(R.id.input_unit_text);
+            TextView inputUnitText = findViewById(R.id.input_storage_text);
             inputUnitText.setText(inputUnit);
             convertUnits();
         });
@@ -73,7 +72,7 @@ public class Temperature extends AppCompatActivity {
         oRadioGroup.setOnCheckedChangeListener((group, checkedId) -> {
             RadioButton selectedRadioButton = findViewById(checkedId);
             outputUnit = selectedRadioButton.getText().toString();
-            TextView outputUnitText = findViewById(R.id.output_unit_text);
+            TextView outputUnitText = findViewById(R.id.output_storage_text);
             outputUnitText.setText(outputUnit);
             convertUnits();
         });
@@ -99,34 +98,34 @@ public class Temperature extends AppCompatActivity {
     // Calculate conversion result
     private double calculateConversion(double inputValueDouble) {
         double result = inputValueDouble;
-        if (inputUnit.equals("Celsius") && outputUnit.equals("Celsius")) {
+
+        if (inputUnit.equals("kiloBytes") && outputUnit.equals("kiloBytes")) {
             result = inputValueDouble;
-        } else if (inputUnit.equals("Celsius") && outputUnit.equals("Fahrenheit")) {
-            result = inputValueDouble * 9/5 + 32;
-        } else if (inputUnit.equals("Celsius") && outputUnit.equals("Kelvin")) {
-            result = inputValueDouble + 273.15;
-        } else if (inputUnit.equals("Fahrenheit") && outputUnit.equals("Fahrenheit")) {
+        } else if (inputUnit.equals("kiloBytes") && outputUnit.equals("MegaBytes")) {
+            result = inputValueDouble / 1024;
+        } else if (inputUnit.equals("kiloBytes") && outputUnit.equals("GigaBytes")) {
+            result = inputValueDouble / 1000000;
+        } else if (inputUnit.equals("MegaBytes") && outputUnit.equals("MegaBytes")) {
             result = inputValueDouble;
-        } else if (inputUnit.equals("Fahrenheit") && outputUnit.equals("Celsius")) {
-            result = (inputValueDouble - 32) * 5/9;
-        } else if (inputUnit.equals("Fahrenheit") && outputUnit.equals("Kelvin")) {
-            result = (inputValueDouble - 32) * 5/9 + 273.15;
-        } else if (inputUnit.equals("Kelvin") && outputUnit.equals("Kelvin")) {
+        } else if (inputUnit.equals("MegaBytes") && outputUnit.equals("kiloBytes")) {
+            result = inputValueDouble * 1024;
+        } else if (inputUnit.equals("MegaBytes") && outputUnit.equals("GigaBytes")) {
+            result = inputValueDouble / 100;
+        } else if (inputUnit.equals("GigaBytes") && outputUnit.equals("GigaBytes")) {
             result = inputValueDouble;
-        } else if (inputUnit.equals("Kelvin") && outputUnit.equals("Celsius")) {
-            result = inputValueDouble - 273.15;
-        } else if (inputUnit.equals("Kelvin") && outputUnit.equals("Fahrenheit")) {
-            result = (inputValueDouble - 273.15) * 9/5 + 32;
+        } else if (inputUnit.equals("GigaBytes") && outputUnit.equals("kiloBytes")) {
+            result = inputValueDouble * 1000000;
+        } else if (inputUnit.equals("GigaBytes") && outputUnit.equals("MegaBytes")) {
+            result = inputValueDouble / 1024;
         } else {
             throw new IllegalArgumentException("Invalid unit conversion");
         }
-
         return result;
     }
 
-    // Display the result in the output TextView
-    private void displayResult(double result) {
-        DecimalFormat df = new DecimalFormat("#.##");
-        outputValue.setText(df.format(result));
+    public void displayResult (double result){
+    DecimalFormat df = new DecimalFormat("#.###");
+    outputValue.setText(df.format(result));
     }
 }
+

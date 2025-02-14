@@ -13,6 +13,11 @@ import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.annotation.NonNull;
 
 
+import com.example.unitconverter2.common.About;
+import com.example.unitconverter2.common.Length;
+import com.example.unitconverter2.common.Mass;
+import com.example.unitconverter2.common.Speed;
+import com.example.unitconverter2.common.Storage;
 import com.example.unitconverter2.common.Length;
 import com.example.unitconverter2.common.Temperature;
 import com.example.unitconverter2.common.TimeConverterActivity;
@@ -28,6 +33,9 @@ public class MainActivity extends AppCompatActivity {
     MaterialCardView b1;
     MaterialCardView timeCard;
     MaterialCardView tempCard;
+    MaterialCardView storageCard;
+    MaterialCardView massCard;
+    MaterialCardView speedCard;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -38,8 +46,6 @@ public class MainActivity extends AppCompatActivity {
         drawerLayout = findViewById(R.id.main);
         buttonDrawerToggle = findViewById(R.id.ButtonDrwaertoggle);
         navigationView = findViewById(R.id.navigationview);
-
-
 
         buttonDrawerToggle.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -68,6 +74,26 @@ public class MainActivity extends AppCompatActivity {
                     startActivity(intent);
                 }
 
+                if(itemId == R.id.navStorage) {
+                    Intent intent = new Intent(MainActivity.this, Storage.class);
+                    startActivity(intent);
+                }
+
+                if(itemId == R.id.navMass) {
+                    Intent intent = new Intent(MainActivity.this, Mass.class);
+                    startActivity(intent);
+                }
+
+                if(itemId == R.id.navSpeed) {
+                    Intent intent = new Intent(MainActivity.this, Speed.class);
+                    startActivity(intent);
+                }
+
+                if(itemId == R.id.navAbout) {
+                    Intent intent = new Intent(MainActivity.this, About.class);
+                    startActivity(intent);
+                }
+
                 drawerLayout.close();
 
                 return false;
@@ -84,6 +110,7 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+
         timeCard = findViewById(R.id.Time);
         timeCard.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -92,6 +119,7 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+
         tempCard = findViewById(R.id.temperature_card);
         tempCard.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -101,6 +129,33 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        storageCard = findViewById(R.id.storage);
+        storageCard.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                System.out.print("Hello world");
+                Intent intent = new Intent(MainActivity.this, Storage.class);
+                startActivity(intent);
+            }
+        });
+
+        massCard = findViewById(R.id.Mass);
+        massCard.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, Mass.class);
+                startActivity(intent);
+         }
+        });
+
+        speedCard = findViewById(R.id.Speed);
+        speedCard.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, Speed.class);
+                startActivity(intent);
+            }
+        });
 
     }
 }

@@ -12,11 +12,11 @@ import com.example.unitconverter2.R;
 
 import java.text.DecimalFormat;
 
-public class Temperature extends AppCompatActivity {
+public class Speed extends AppCompatActivity {
 
     // RadioButtons for input and output units to set default option
-    RadioButton iCelsius;
-    RadioButton oCelsius;
+    RadioButton iKmph;
+    RadioButton oKmph;
 
     // Input and Output Text Fields
     AppCompatEditText inputValue;
@@ -27,46 +27,53 @@ public class Temperature extends AppCompatActivity {
     RadioGroup oRadioGroup;
 
     // Selected units
-    String inputUnit = "Celsius";
-    String outputUnit = "Celsius";
+    String inputUnit = "Kmph";
+    String outputUnit = "Kmph";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        System.out.println("Hello world1");
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_temperature);
+        setContentView(R.layout.activity_speed);
+        System.out.println("Hello world2");
 //        getSupportActionBar().setTitle("MeasureMate");
         initializeUIElements();
-
+        System.out.println("Hello world3");
         setDefaultRadioButtonOptions();
-
+        System.out.println("Hello world4");
         setRadioGroupListeners();
+        System.out.println("Hello world5");
     }
 
     // Initialize UI elements
     private void initializeUIElements() {
-        inputValue = findViewById(R.id.et_temp_input);
-        outputValue = findViewById(R.id.et_temp_output);
+        inputValue = findViewById(R.id.et_name_input);
+        outputValue = findViewById(R.id.et_name_output);
 
-        iRadioGroup = findViewById(R.id.i_temp_radio_buttons);
-        iCelsius = findViewById(R.id.i_celsius);
+        iRadioGroup = findViewById(R.id.i_radio_buttons);
+        iKmph = findViewById(R.id.i_kmph);
 
-        oRadioGroup = findViewById(R.id.o_temp_radio_buttons);
-        oCelsius = findViewById(R.id.o_celsius);
+        oRadioGroup = findViewById(R.id.o_radio_buttons);
+        oKmph = findViewById(R.id.o_Kmph);
     }
 
     // Set default RadioButton options
     private void setDefaultRadioButtonOptions() {
-        iCelsius.setChecked(true);
-        oCelsius.setChecked(true);
+        iKmph.setChecked(true);
+        oKmph.setChecked(true);
     }
 
     // Set listeners for RadioGroups
     private void setRadioGroupListeners() {
+        System.out.println("Hello world41");
         iRadioGroup.setOnCheckedChangeListener((group, checkedId) -> {
+            System.out.println("Hello world42");
             RadioButton selectedRadioButton = findViewById(checkedId);
+            System.out.println("Hello world4.1");
             inputUnit = selectedRadioButton.getText().toString();
             TextView inputUnitText = findViewById(R.id.input_unit_text);
             inputUnitText.setText(inputUnit);
+            System.out.println("hello world4.1");
             convertUnits();
         });
 
@@ -98,25 +105,26 @@ public class Temperature extends AppCompatActivity {
 
     // Calculate conversion result
     private double calculateConversion(double inputValueDouble) {
-        double result = inputValueDouble;
-        if (inputUnit.equals("Celsius") && outputUnit.equals("Celsius")) {
+        double result;
+
+        if (inputUnit.equals("Kmph") && outputUnit.equals("Kmph")) {
             result = inputValueDouble;
-        } else if (inputUnit.equals("Celsius") && outputUnit.equals("Fahrenheit")) {
-            result = inputValueDouble * 9/5 + 32;
-        } else if (inputUnit.equals("Celsius") && outputUnit.equals("Kelvin")) {
-            result = inputValueDouble + 273.15;
-        } else if (inputUnit.equals("Fahrenheit") && outputUnit.equals("Fahrenheit")) {
+        } else if (inputUnit.equals("Kmph") && outputUnit.equals("Kms")) {
+            result = inputValueDouble / 3600;
+        } else if (inputUnit.equals("Kmph") && outputUnit.equals("Mph")) {
+            result = inputValueDouble * 0.621371;
+        } else if (inputUnit.equals("Kms") && outputUnit.equals("Kms")) {
             result = inputValueDouble;
-        } else if (inputUnit.equals("Fahrenheit") && outputUnit.equals("Celsius")) {
-            result = (inputValueDouble - 32) * 5/9;
-        } else if (inputUnit.equals("Fahrenheit") && outputUnit.equals("Kelvin")) {
+        } else if (inputUnit.equals("Kms") && outputUnit.equals("Kmph")) {
+            result = inputValueDouble * 3600;
+        } else if (inputUnit.equals("Kms") && outputUnit.equals("Mph")) {
             result = (inputValueDouble - 32) * 5/9 + 273.15;
-        } else if (inputUnit.equals("Kelvin") && outputUnit.equals("Kelvin")) {
+        } else if (inputUnit.equals("Mph") && outputUnit.equals("Mph")) {
             result = inputValueDouble;
-        } else if (inputUnit.equals("Kelvin") && outputUnit.equals("Celsius")) {
-            result = inputValueDouble - 273.15;
-        } else if (inputUnit.equals("Kelvin") && outputUnit.equals("Fahrenheit")) {
-            result = (inputValueDouble - 273.15) * 9/5 + 32;
+        } else if (inputUnit.equals("Mph") && outputUnit.equals("Kmph")) {
+            result = inputValueDouble * 1.60934;
+        } else if (inputUnit.equals("Mph") && outputUnit.equals("Kms")) {
+            result = inputValueDouble * 1.60934;
         } else {
             throw new IllegalArgumentException("Invalid unit conversion");
         }
@@ -126,7 +134,7 @@ public class Temperature extends AppCompatActivity {
 
     // Display the result in the output TextView
     private void displayResult(double result) {
-        DecimalFormat df = new DecimalFormat("#.##");
+        DecimalFormat df = new DecimalFormat("#.#######");
         outputValue.setText(df.format(result));
     }
 }

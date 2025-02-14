@@ -2,19 +2,14 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/main"
+    android:id="@+id/speed"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:baselineAligned="false"
     android:orientation="horizontal"
     android:padding="16dp"
-    tools:context=".common.Length">
+    tools:context=".common.Speed">
 
-
-<<<<<<< HEAD
-=======
-
->>>>>>> c089b54eb35cbe9f3d5a15707c30aa5e61df3c19
     <!-- Input Section -->
     <LinearLayout
         android:layout_width="0dp"
@@ -28,7 +23,7 @@
             android:id="@+id/input_unit_text"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/kilometer"
+            android:text="@string/Kmph"
             android:textColor="@color/text_color" />
 
         <!-- Input Value Field -->
@@ -65,22 +60,22 @@
             android:layout_height="wrap_content">
 
             <RadioButton
-                android:id="@+id/i_km"
+                android:id="@+id/i_kmph"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/kilometer" />
+                android:text="@string/Kmph" />
 
             <RadioButton
-                android:id="@+id/i_m"
+                android:id="@+id/i_Kms"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/meter" />
+                android:text="@string/Kms" />
 
             <RadioButton
-                android:id="@+id/i_cm"
+                android:id="@+id/i_Mph"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/centimeter" />
+                android:text="@string/Mph" />
         </RadioGroup>
     </LinearLayout>
 
@@ -96,7 +91,7 @@
             android:id="@+id/output_unit_text"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/kilometer"
+            android:text="@string/Kmph"
             android:textColor="@color/text_color" />
 
         <!-- Output Value Field -->
@@ -133,22 +128,22 @@
             android:layout_height="wrap_content">
 
             <RadioButton
-                android:id="@+id/o_km"
+                android:id="@+id/o_Kmph"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/kilometer" />
+                android:text="@string/Kmph" />
 
             <RadioButton
-                android:id="@+id/o_m"
+                android:id="@+id/o_Kms"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/meter" />
+                android:text="@string/Kms" />
 
             <RadioButton
-                android:id="@+id/o_cm"
+                android:id="@+id/o_Mph"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/centimeter" />
+                android:text="@string/Mph" />
         </RadioGroup>
-    </LinearLayout>
+</LinearLayout>
 </LinearLayout>

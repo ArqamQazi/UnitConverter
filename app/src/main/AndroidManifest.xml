@@ -8,6 +8,51 @@
         android:fullBackupContent="@xml/backup_rules"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
+<<<<<<< HEAD
+        android:roundIcon="@mipmap/ic_launcher"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.UnitConverter2"
+        tools:targetApi="31">
+
+        <activity
+            android:name=".common.Temperature"
+            android:exported="false"
+            android:parentActivityName=".MainActivity"
+            android:theme="@style/AppTheme.WithActionBar" /> <!-- <activity -->
+        <!-- android:name=".common.TemperatureConverter" -->
+        <!-- android:exported="false" -->
+        <!-- android:parentActivityName=".MainActivity"/> -->
+        <activity
+            android:name=".common.TimeConverterActivity"
+            android:exported="false"
+            android:parentActivityName=".MainActivity"
+            android:theme="@style/AppTheme.WithActionBar" />
+        <activity
+            android:name=".common.Length"
+            android:exported="false"
+            android:parentActivityName=".MainActivity"
+            android:theme="@style/AppTheme.WithActionBar" />
+        <activity
+            android:name=".common.Mass"
+            android:exported="false"
+            android:parentActivityName=".MainActivity"
+            android:theme="@style/AppTheme.WithActionBar" />
+        <activity
+            android:name=".common.Storage"
+            android:exported="false"
+            android:parentActivityName=".MainActivity"
+            android:theme="@style/AppTheme.WithActionBar" />
+        <activity
+            android:name=".common.Speed"
+            android:exported="false"
+            android:parentActivityName=".MainActivity"
+            android:theme="@style/AppTheme.WithActionBar" />
+        <activity
+            android:name=".common.About"
+            android:exported="false"
+            android:parentActivityName=".MainActivity"
+            android:theme="@style/AppTheme.WithActionBar" />
+=======
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.UnitConverter2"
@@ -33,6 +78,7 @@
             android:exported="false"
             android:theme="@style/AppTheme.WithActionBar"
             android:parentActivityName=".MainActivity"/>
+>>>>>>> c089b54eb35cbe9f3d5a15707c30aa5e61df3c19
         <activity
             android:name=".MainActivity"
             android:exported="true">

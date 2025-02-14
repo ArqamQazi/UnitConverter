@@ -89,10 +89,10 @@ public class Length extends AppCompatActivity {
         switch (unit) {
             case "Centimeter":
                 return 0.01;
-            case "Meter":
-                return 1.0;
             case "Kilometer":
                 return 1000.0;
+            case "Meter":
+                return 1.0;
             default:
                 return 1.0;
         }

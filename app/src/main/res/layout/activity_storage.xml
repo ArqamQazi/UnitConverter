@@ -2,19 +2,14 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/main"
+    android:id="@+id/storage"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:baselineAligned="false"
     android:orientation="horizontal"
-    android:padding="16dp"
-    tools:context=".common.Length">
+    android:padding="8dp"
+    android:baselineAligned="false"
+    tools:context=".common.Storage">
 
-
-<<<<<<< HEAD
-=======
-
->>>>>>> c089b54eb35cbe9f3d5a15707c30aa5e61df3c19
     <!-- Input Section -->
     <LinearLayout
         android:layout_width="0dp"
@@ -25,10 +20,10 @@
 
         <!-- Input Unit Text -->
         <TextView
-            android:id="@+id/input_unit_text"
+            android:id="@+id/input_storage_text"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/kilometer"
+            android:text="@string/kilobytes"
             android:textColor="@color/text_color" />
 
         <!-- Input Value Field -->
@@ -39,7 +34,7 @@
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
 
             <androidx.appcompat.widget.AppCompatEditText
-                android:id="@+id/et_name_input"
+                android:id="@+id/et_time_input"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="@string/input"
@@ -65,22 +60,22 @@
             android:layout_height="wrap_content">
 
             <RadioButton
-                android:id="@+id/i_km"
+                android:id="@+id/i_kb"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/kilometer" />
+                android:text="@string/kilobytes" />
 
             <RadioButton
-                android:id="@+id/i_m"
+                android:id="@+id/i_mb"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/meter" />
+                android:text="@string/megabytes" />
 
             <RadioButton
-                android:id="@+id/i_cm"
+                android:id="@+id/i_gb"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/centimeter" />
+                android:text="@string/gigabytes" />
         </RadioGroup>
     </LinearLayout>
 
@@ -93,10 +88,10 @@
 
         <!-- Output Unit Text -->
         <TextView
-            android:id="@+id/output_unit_text"
+            android:id="@+id/output_storage_text"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/kilometer"
+            android:text="@string/kilobytes"
             android:textColor="@color/text_color" />
 
         <!-- Output Value Field -->
@@ -107,7 +102,7 @@
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
 
             <androidx.appcompat.widget.AppCompatEditText
-                android:id="@+id/et_name_output"
+                android:id="@+id/et_time_output"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="@string/output"
@@ -133,22 +128,24 @@
             android:layout_height="wrap_content">
 
             <RadioButton
-                android:id="@+id/o_km"
+                android:id="@+id/o_kb"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/kilometer" />
+                android:text="@string/kilobytes" />
 
             <RadioButton
-                android:id="@+id/o_m"
+                android:id="@+id/o_mb"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/meter" />
+                android:text="@string/megabytes" />
 
             <RadioButton
-                android:id="@+id/o_cm"
+                android:id="@+id/o_gb"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/centimeter" />
+                android:text="@string/gigabytes" />
         </RadioGroup>
+
     </LinearLayout>
+
 </LinearLayout>

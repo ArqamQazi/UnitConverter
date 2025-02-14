@@ -1,5 +1,9 @@
 <resources>
+<<<<<<< HEAD
+    <string name="app_name">MeasureMate</string>
+=======
     <string name="app_name">UnitConverter</string>
+>>>>>>> c089b54eb35cbe9f3d5a15707c30aa5e61df3c19
     <string name="kilometer">Kilometer</string>
     <string name="meter">Meter</string>
     <string name="centimeter">Centimeter</string>
@@ -14,5 +18,21 @@
     <string name="celsius">Celsius</string>
     <string name="fahrenheit">Fahrenheit</string>
     <string name="kelvin">Kelvin</string>
+<<<<<<< HEAD
+    <string name="kilobytes">kiloBytes</string>
+    <string name="megabytes">MegaBytes</string>
+    <string name="gigabytes">GigaBytes</string>
+    <string name="kilogram">Kilogram</string>
+    <string name="grams">Grams</string>
+    <string name="pounds">Pounds</string>
+    <string name="Kmph">Kmph</string>
+    <string name="Kms">Kms</string>
+    <string name="Mph">Mph</string>
+    <string name="about_text">MeasureMate is designed to handle all your unit conversion needs, covering a wide range of categories, including length, temperature, speed, time, mass, and storage. We aim to provide an intuitive and reliable tool that you can trust for accurate conversions every time.</string>
+    <string name="logo">Logo</string>
+    <string name="rate_us">Rate Us!</string>
+    <string name="measuremate">MeasureMate</string>
+=======
+>>>>>>> c089b54eb35cbe9f3d5a15707c30aa5e61df3c19
 
 </resources>
