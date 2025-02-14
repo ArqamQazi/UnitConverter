@@ -2,7 +2,11 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+<<<<<<< HEAD
     android:id="@+id/main"
+=======
+    android:id="@+id/temp"
+>>>>>>> c089b54eb35cbe9f3d5a15707c30aa5e61df3c19
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="horizontal"

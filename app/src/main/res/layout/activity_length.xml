@@ -11,6 +11,10 @@
     tools:context=".common.Length">
 
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> c089b54eb35cbe9f3d5a15707c30aa5e61df3c19
     <!-- Input Section -->
     <LinearLayout
         android:layout_width="0dp"

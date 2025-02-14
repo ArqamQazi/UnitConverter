@@ -1,5 +1,9 @@
 <resources>
+<<<<<<< HEAD
     <string name="app_name">MeasureMate</string>
+=======
+    <string name="app_name">UnitConverter</string>
+>>>>>>> c089b54eb35cbe9f3d5a15707c30aa5e61df3c19
     <string name="kilometer">Kilometer</string>
     <string name="meter">Meter</string>
     <string name="centimeter">Centimeter</string>
@@ -14,6 +18,7 @@
     <string name="celsius">Celsius</string>
     <string name="fahrenheit">Fahrenheit</string>
     <string name="kelvin">Kelvin</string>
+<<<<<<< HEAD
     <string name="kilobytes">kiloBytes</string>
     <string name="megabytes">MegaBytes</string>
     <string name="gigabytes">GigaBytes</string>
@@ -27,5 +32,7 @@
     <string name="logo">Logo</string>
     <string name="rate_us">Rate Us!</string>
     <string name="measuremate">MeasureMate</string>
+=======
+>>>>>>> c089b54eb35cbe9f3d5a15707c30aa5e61df3c19
 
 </resources>

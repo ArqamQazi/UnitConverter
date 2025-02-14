@@ -5,7 +5,16 @@
         <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
         <item name="android:statusBarColor"> @android:color/transparent</item>
     </style>
+<<<<<<< HEAD
     <style name="AppTheme.WithActionBar" parent="Theme.Material3.DayNight">
         <!-- Customize your theme here --></style>
+=======
+
+    <style name="AppTheme.WithActionBar" parent="Theme.Material3.DayNight">
+        <!-- Customize your theme here -->
+    </style>
+
+
+>>>>>>> c089b54eb35cbe9f3d5a15707c30aa5e61df3c19
     <style name="Theme.UnitConverter2" parent="Base.Theme.UnitConverter2" />
 </resources>

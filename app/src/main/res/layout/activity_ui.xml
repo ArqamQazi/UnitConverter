@@ -36,6 +36,7 @@
                     android:adjustViewBounds="true"
                     android:scaleType="fitCenter"
                     android:contentDescription="Length_logo"
+
                     android:src="@drawable/straighten_24px" />
 
                 <TextView
@@ -63,6 +64,7 @@
                 android:scaleType="fitCenter"
                 app:tint="@color/black"
                 android:contentDescription="Temperature_logo"
+
                 android:src="@drawable/device_thermostat_24px" />
 
             <TextView
@@ -189,3 +191,4 @@
         </com.google.android.material.card.MaterialCardView>
     </LinearLayout>
 </LinearLayout>
+

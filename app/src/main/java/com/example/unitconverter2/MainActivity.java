@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.view.MenuItem;
+import android.widget.Toast;
 
 import android.widget.ImageButton;
 
@@ -17,6 +18,7 @@ import com.example.unitconverter2.common.Length;
 import com.example.unitconverter2.common.Mass;
 import com.example.unitconverter2.common.Speed;
 import com.example.unitconverter2.common.Storage;
+import com.example.unitconverter2.common.Length;
 import com.example.unitconverter2.common.Temperature;
 import com.example.unitconverter2.common.TimeConverterActivity;
 import com.google.android.material.card.MaterialCardView;
@@ -44,6 +46,7 @@ public class MainActivity extends AppCompatActivity {
         drawerLayout = findViewById(R.id.main);
         buttonDrawerToggle = findViewById(R.id.ButtonDrwaertoggle);
         navigationView = findViewById(R.id.navigationview);
+
         buttonDrawerToggle.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -96,6 +99,8 @@ public class MainActivity extends AppCompatActivity {
                 return false;
             }
         });
+
+//        getSupportActionBar().setTitle("MeasureMate");
 
         b1 = findViewById(R.id.Length);
         b1.setOnClickListener(new View.OnClickListener() {
